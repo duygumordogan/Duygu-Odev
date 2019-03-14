@@ -12947,11 +12947,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Duygu\\Desktop\\duygu ödev\\Duygu-Odev\\DuyguOdev\\DuyguOdev.csproj",
+      "projectUniqueName": "C:\\Users\\Duygu\\Desktop\\duygu-odev2\\Duygu-Odev\\DuyguOdev\\DuyguOdev.csproj",
       "projectName": "DuyguOdev",
-      "projectPath": "C:\\Users\\Duygu\\Desktop\\duygu ödev\\Duygu-Odev\\DuyguOdev\\DuyguOdev.csproj",
+      "projectPath": "C:\\Users\\Duygu\\Desktop\\duygu-odev2\\Duygu-Odev\\DuyguOdev\\DuyguOdev.csproj",
       "packagesPath": "C:\\Users\\Duygu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Duygu\\Desktop\\duygu ödev\\Duygu-Odev\\DuyguOdev\\obj\\",
+      "outputPath": "C:\\Users\\Duygu\\Desktop\\duygu-odev2\\Duygu-Odev\\DuyguOdev\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

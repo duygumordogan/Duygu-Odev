@@ -1,74 +1,47 @@
-﻿@model List<Student>
+﻿@model IEnumerable<DuyguOdev.Models.Student>
+
 @{
-    ViewData["Title"] = "Students";
+    ViewData["Title"] = "Index";
 }
 
-<html>
+<h1>Index</h1>
 
-<style>
-    #customers {
-        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-        #customers td, #customers th {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-
-        #customers tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        #customers tr:hover {
-            background-color: #ddd;
-        }
-
-        #customers th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #1E68B0;
-            color: white;
-        }
-</style>
-
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<body>
-
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-            <a href="#home" class="w3-bar-item w3-button"><b>Cet322</b> Duygu Mordoğan</a>
-            <!-- Float links to the right. Hide them on small screens -->
-            <div class="w3-right w3-hide-small" style="position: relative; right: 20%; ">
-                <a href="/students" class="w3-bar-item w3-button">Students</a>
-                <a href="/" class="w3-bar-item w3-button">Students' Details</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-        <table id="customers">
-            <tr>
-                <th>Name</th>
-                <th>Detay</th>
-            </tr>
-
-            @foreach (var item in @Model)
-            {
-                <tr>
-                    <td>@item.Name</td>
-                    <td><a asp-controller="Students" asp-action="Detay" asp-route-id="@item.Id" class="btn btn-primary">Detay</a></td>
-                </tr>
-            }
-        </table>
-    </header>
-
-</body>
-</html>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StuID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StuID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
